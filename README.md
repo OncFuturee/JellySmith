@@ -25,6 +25,10 @@ JellySmith 用于把下载目录中的电影、剧集和外挂字幕整理成 Je
     <td><img width="750" src="https://github.com/user-attachments/assets/6b113bb0-88ef-4d52-a102-11fa9a0659a0"></td>
     <td><img width="750" src="https://github.com/user-attachments/assets/f0f85cf8-9303-4bc0-bbdd-dd661caa9cf9"></td>
   </tr>
+  <tr>
+    <td><img width="1707" height="1032" alt="image" src="https://github.com/user-attachments/assets/e63aa1c6-c76c-4471-a183-48dca014f42d" /></td>
+    <td><img width="1707" height="1032" alt="image" src="https://github.com/user-attachments/assets/6728d214-dcaf-482f-9f15-c3b1c8c477f8" /></td>
+  </tr>
 </table>
 
 ## 主要功能
