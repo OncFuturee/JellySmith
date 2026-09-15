@@ -20,6 +20,13 @@ JellySmith 用于把下载目录中的电影、剧集和外挂字幕整理成 Je
 
 > 当前项目处于早期公开版本。首次处理重要媒体库前，请先使用少量文件验证规则并保留备份。
 
+<table>
+  <tr>
+    <td><img width="750" src="https://github.com/user-attachments/assets/6b113bb0-88ef-4d52-a102-11fa9a0659a0"></td>
+    <td><img width="750" src="https://github.com/user-attachments/assets/f0f85cf8-9303-4bc0-bbdd-dd661caa9cf9"></td>
+  </tr>
+</table>
+
 ## 主要功能
 
 - **只读扫描与初筛**：扫描阶段不会修改文件，可按扩展名批量选择进入后续流程的内容。
