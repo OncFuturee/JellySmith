@@ -1,0 +1,251 @@
+.app-root {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 58px;
+  grid-template-rows: 38px minmax(0, 1fr) 24px;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background: var(--color-bg-app);
+}
+.topbar {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 0 0 0 8px;
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-panel),
+    var(--color-bg-shell)
+  );
+  overflow: hidden;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  padding: 3px;
+  border-radius: var(--radius-sm);
+  border: 0;
+  background: none;
+  white-space: nowrap;
+  color: var(--color-text-primary);
+}
+.brand:hover {
+  background: var(--color-bg-hover);
+}
+.brand img {
+  width: 24px;
+  height: 24px;
+}
+.app-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding-left: 6px;
+  border-left: 1px solid var(--color-border);
+}
+.app-toolbar button {
+  display: block;
+  width: auto;
+  height: 28px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--color-text-muted);
+}
+.app-toolbar button:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+.titlebar-drag {
+  flex: 1;
+  align-self: stretch;
+  min-width: 30px;
+}
+.window-actions {
+  display: flex;
+  align-self: stretch;
+  margin-left: 0;
+}
+.window-actions button {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+}
+.window-actions button:hover {
+  background: var(--color-bg-hover);
+}
+.window-actions button:last-child:hover {
+  background: var(--color-danger);
+  color: var(--color-text-inverse);
+}
+.window-actions svg {
+  width: 17px;
+  height: 17px;
+}
+.restore-icon {
+  position: relative;
+  width: 12px;
+  height: 10px;
+  border: 1px solid currentColor;
+}
+.restore-icon:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  width: 9px;
+  height: 8px;
+  border: 1px solid currentColor;
+  background: var(--color-bg-shell);
+}
+.page-host {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-bg-app);
+}
+.rail {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 0;
+  margin: 5px 5px 5px 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-shell);
+}
+.rail button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  margin: 0 0 4px;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1;
+}
+.rail button:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+.rail button.active {
+  border-color: var(--color-primary);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary-hover),
+    var(--color-primary)
+  );
+  color: var(--color-text-inverse);
+}
+.rail button:last-child {
+  margin-bottom: 0;
+}
+.rail svg {
+  width: 19px;
+  height: 19px;
+}
+.global-statusbar {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-shell);
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+.global-statusbar span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.global-statusbar svg {
+  width: 12px;
+  height: 12px;
+}
+.global-statusbar .status-activity {
+  min-width: 0;
+  flex: 1;
+  color: var(--color-text-secondary);
+}
+.global-statusbar.is-running .status-activity svg {
+  color: var(--color-primary);
+  animation: status-spin 900ms linear infinite;
+}
+.global-statusbar.is-idle .status-activity svg {
+  color: var(--color-success);
+}
+.global-statusbar.is-error {
+  border-top-color: color-mix(
+    in srgb,
+    var(--color-danger) 55%,
+    var(--color-border)
+  );
+}
+.global-statusbar.is-error .status-activity,
+.global-statusbar.is-error .status-activity svg {
+  color: var(--color-danger);
+}
+.global-statusbar.is-error .status-activity svg {
+  animation: none;
+}
+.global-statusbar .status-activity small {
+  overflow: hidden;
+  color: var(--color-text-muted);
+  text-overflow: ellipsis;
+}
+.global-statusbar .status-progress {
+  position: relative;
+  width: min(220px, 18vw);
+  height: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
+}
+.global-statusbar .status-progress > i {
+  position: absolute;
+  width: 38%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  animation: status-progress 1.15s ease-in-out infinite;
+}
+@keyframes status-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes status-progress {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(300%); }
+}
+@media (max-width: 1080px) {
+  .status-activity small {
+    display: none;
+  }
+}

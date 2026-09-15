@@ -1,0 +1,211 @@
+/* Normalize Ant Design primitives to the compact desktop layout. */
+.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: none !important;
+  white-space: nowrap;
+}
+
+.ant-btn > .ant-btn-icon,
+.ant-btn > .ant-btn-icon > svg {
+  display: inline-flex;
+  flex: none;
+}
+
+.ant-tag {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+  margin-inline-end: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-number,
+.ant-select-selector {
+  box-shadow: none !important;
+}
+
+.ant-input-number,
+.ant-select,
+.ant-select-selector {
+  min-width: 0;
+}
+
+.ant-input-group-addon {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.ant-input-group-addon .ant-btn {
+  width: 36px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.ant-segmented {
+  padding: 2px;
+  background: var(--color-bg-subtle);
+  box-shadow: inset 0 0 0 1px var(--color-border);
+}
+
+.ant-segmented-item {
+  min-height: 28px;
+}
+
+.ant-segmented-item-label {
+  display: flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 12px;
+  line-height: 28px;
+}
+
+.ant-table-wrapper {
+  min-width: 0;
+}
+
+.ant-table-wrapper .ant-table {
+  background: transparent;
+}
+
+.ant-table-wrapper .ant-table-container {
+  border: 0 !important;
+}
+
+.ant-table-wrapper .ant-table-content {
+  scrollbar-gutter: stable;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  height: 38px;
+  padding: 7px 10px;
+  border-bottom-color: var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  height: 38px;
+  padding: 7px 10px;
+  border-bottom-color: var(--color-border);
+  background: var(--color-bg-panel);
+  vertical-align: middle;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr:hover > td {
+  background: var(--color-bg-hover) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr.ant-table-row-selected > td {
+  background: var(--color-bg-selected) !important;
+}
+
+.ant-table-wrapper .ant-pagination {
+  min-height: 32px;
+  margin: 10px 12px;
+  align-items: center;
+}
+
+.ant-pagination .ant-pagination-item,
+.ant-pagination .ant-pagination-prev,
+.ant-pagination .ant-pagination-next {
+  display: grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  line-height: 26px;
+}
+
+.ant-checkbox-wrapper,
+.ant-radio-wrapper {
+  align-items: center;
+}
+
+.ant-checkbox-wrapper .ant-checkbox,
+.ant-radio-wrapper .ant-radio {
+  flex: none;
+  align-self: center;
+}
+
+.ant-steps .ant-steps-item-container {
+  display: flex;
+  align-items: center;
+}
+
+.ant-steps .ant-steps-item-icon {
+  flex: none;
+  margin-top: 0;
+}
+
+.ant-steps .ant-steps-item-content {
+  min-height: auto;
+}
+
+.ant-steps .ant-steps-item-title {
+  padding-right: 8px;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.ant-steps .ant-steps-item-description {
+  display: none;
+}
+
+.ant-steps .ant-steps-item-tail {
+  top: 13px;
+}
+
+.ant-modal .ant-modal-content,
+.ant-card {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-panel);
+  box-shadow: var(--shadow-float);
+}
+
+.ant-modal .ant-modal-header,
+.ant-card .ant-card-head {
+  background: transparent;
+}
+
+.ant-empty {
+  color: var(--color-text-muted);
+}
+
+.ant-alert {
+  align-items: flex-start;
+}
+
+.ant-alert .ant-alert-icon {
+  flex: none;
+  margin-top: 2px;
+}
+
+.ant-form-item .ant-form-item-label {
+  padding-bottom: 5px;
+}
+
+.ant-form-item .ant-form-item-label > label {
+  min-height: 20px;
+  color: var(--color-text-secondary);
+}
+
+.ant-form-item .ant-form-item-extra {
+  min-height: 0;
+  padding-top: 4px;
+  color: var(--color-text-muted);
+}
+
+.ant-space {
+  min-width: 0;
+}

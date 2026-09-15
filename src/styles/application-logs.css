@@ -1,0 +1,73 @@
+.application-logs-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 10px);
+  min-width: 0;
+  min-height: 0;
+  margin: 5px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-panel);
+  overflow: hidden;
+}
+.application-logs-page > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+.application-logs-title,
+.application-log-actions,
+.application-log-tools {
+  display: flex;
+  align-items: center;
+}
+.application-logs-title {
+  gap: 10px;
+}
+.application-logs-title > svg {
+  width: 22px;
+  color: var(--color-primary);
+}
+.application-logs-title h2,
+.application-logs-title p {
+  margin: 0;
+}
+.application-logs-title p {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+.application-log-actions {
+  gap: 8px;
+}
+.application-log-tools {
+  gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+.application-log-tools .ant-input-affix-wrapper {
+  width: min(420px, 40vw);
+}
+.application-log-tools > span:last-child {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+.application-log-table {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+.application-log-table pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--color-text-secondary);
+  font: inherit;
+}
+.application-log-table .ant-empty {
+  margin-top: 12vh;
+}

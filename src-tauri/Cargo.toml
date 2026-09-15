@@ -1,0 +1,36 @@
+[package]
+name = "jellysmith"
+version = "0.1.0"
+description = "A human-controlled Jellyfin media organizer"
+authors = ["JellySmith"]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/OncFuturee/JellySmith"
+homepage = "https://github.com/OncFuturee/JellySmith"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "jellysmith_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+regex = "1"
+rfd = "0.15"
+rusqlite = { version = "0.32", features = ["bundled"] }
+blake3 = "1"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+
+[dev-dependencies]
+tempfile = "3"

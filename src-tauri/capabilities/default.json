@@ -1,0 +1,23 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-close",
+    "core:window:allow-minimize",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-is-maximized",
+    "core:window:allow-start-dragging",
+    {
+      "identifier": "opener:allow-open-url",
+      "allow": [
+        { "url": "https://www.themoviedb.org/settings/api" },
+        { "url": "https://aistudio.google.com/app/apikey" },
+        { "url": "https://cloud.siliconflow.cn/account/ak" },
+        { "url": "https://platform.openai.com/api-keys" }
+      ]
+    }
+  ]
+}
